@@ -23,20 +23,24 @@ header{
     height: 80px;
     width: 100vw;
     align-items: center;
-    gap: 48px;
-    padding: 0px 40px;
+    padding: 0 4rem 0 2rem;
     background-color: #131921;
 }
 
-.div-header menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 48px;
-    font-size: 1rem;
+.div-header img{
+    width: 110px;
+    height: 60px;
+    object-fit: cover;
 }
 
-.div-header li, span{
+.barra-pesquisa{
+    display: flex;
+    width: 500px;
+    height: 40px;
+    border-radius: 8px 0 0 8px;
+}
+
+.div-header span{
     padding: 8px 16px;
     color: white;
 }
@@ -55,22 +59,20 @@ header{
 
 .quadros-home{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     background-color: gray;
     gap: 1.5rem;
 }
 
 .cards{
     display: grid;
-    width: 450px;
-    height: 450px;
     gap: 10px;
     justify-content: flex-start;
     flex-direction: column;
     background-color: white;
 }
 
-img{
+.cards img{
     margin-top: 20px;
     width: auto;
     height: 50%;
