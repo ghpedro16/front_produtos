@@ -1,39 +1,36 @@
 'use strict'
 
-import produtos from "./produtos.json" with {type: "json"}
+import produtos from "./produtos.json" with {type: "json"};
 
-function criarProdutos(produtos){
-    const cards = document.createElement('div')
-    cards.classList.add('cards')
+function criarProduto(produto) {
+    const cards = document.createElement('div');
+    cards.classList.add('cards');
 
-    const nome = document.createElement('span')
-    nome.textContent = produtos.nome
+    const nome = document.createElement('h1');
+    nome.textContent = produto.nome;
 
-    const descricao = document.createElement('h1')
-    descricao.textContent = produtos.descricao
+    const descricao = document.createElement('span');
+    descricao.textContent = produto.descricao;
 
-    const preco = document.createElement('p')
-    preco.textContent = produtos.preco
+    const preco = document.createElement('h2');
+    preco.textContent = produto.preco;
 
-    const classificacao = document.createElement('p')
-    classificacao.textContent = produtos.classificacao
+    const classificacao = document.createElement('p');
+    classificacao.textContent = produto.classificacao;
 
-    const categoria = document.createElement('p')
-    categoria.textContent = produtos.categoria
+    const categoria = document.createElement('h3');
+    categoria.textContent = produto.categoria;
 
-    const img = document.createElement('img')
-    img.src = `./img/${produtos.imagem}`
+    const img = document.createElement('img');
+    img.src = `./img/${produto.imagem}`;
 
-    document.getElementById('quadro-home').appendChild(cards)
-    cards.appendChild(img, classificacao, nome, descricao, preco, categoria)
+    cards.append(img, classificacao, nome, descricao, preco, categoria);
+
+    document.getElementById('quadro-home').appendChild(cards);
 }
 
-function classificarProdutos(){
-
-}
-
-function carregarProdutos(){
-    produtos.forEach(criarProdutos)
+function carregarProdutos() {
+    produtos.forEach(criarProduto);
 }
 
 carregarProdutos();

@@ -14,14 +14,14 @@ ul, ol, li{
 
 header{
     height: 120px;
-    width: 100vw;
+    width: 100%;
 }
 
 .div-header{
     display: flex;
     justify-content: space-between;
     height: 80px;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     padding: 0 4rem 0 2rem;
     background-color: #131921;
@@ -33,11 +33,15 @@ header{
     object-fit: cover;
 }
 
-.barra-pesquisa{
-    display: flex;
-    width: 500px;
-    height: 40px;
-    border-radius: 8px 0 0 8px;
+#barra-pesquisa{
+    width: 400px;
+    height: 35px;
+    padding: 8px;
+}
+
+#botao-pesquisar{
+    width: 60px;
+    height: 35px;
 }
 
 .div-header span{
@@ -47,7 +51,7 @@ header{
 
 .sub-header ul{
     height: 40px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,23 +61,64 @@ header{
     color: white;
 }
 
-.quadros-home{
+#quadro-home {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    background-color: gray;
-    gap: 1.5rem;
+    background-color: #f3f3f3;
+    gap: 2rem;
+    padding: 2rem;
 }
 
-.cards{
-    display: grid;
-    gap: 10px;
-    justify-content: flex-start;
+.cards {
+    display: flex;
     flex-direction: column;
-    background-color: white;
+    justify-content: space-between;
+    gap: 12px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.cards img{
-    margin-top: 20px;
-    width: auto;
-    height: 50%;
+.cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cards img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.cards span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.cards h1 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #555;
+    line-height: 1.4;
+}
+
+.cards p:nth-of-type(1) {
+    color: #d32f2f;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cards p:nth-of-type(2) {
+    color: #fbc02d;
+    font-size: 0.9rem;
+}
+
+.cards p:nth-of-type(3) {
+    color: #888;
+    font-size: 0.9rem;
+    font-style: italic;
 }
